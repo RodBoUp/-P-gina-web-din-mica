@@ -75,16 +75,16 @@
 
     <script>
         document.getElementById("Formulario").addEventListener("submit", function(event) {
-            var inputs = this.querySelectorAll("input, select, textarea");
-            var isValid = true;
-
-            inputs.forEach(function(input) {
+            var entrada = this.querySelectorAll("input, select, textarea");
+            var verificar = true;
+            
+            entrada.forEach(function(input) {
                 if (!input.value && input.type !== "submit") {
-                    isValid = false;
+                    verificar = false;
                 }
             });
 
-            if (!isValid) {
+            if (!verificar) {
                 event.preventDefault(); 
                 alert("Dejo espacios sin llenar en el formulario. Por favor llenelos");
             }
